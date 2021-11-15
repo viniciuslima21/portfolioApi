@@ -2,7 +2,7 @@ const PortfolioModel = require('../model/PortfolioModel')
 
 class PortfolioValidation {
     async verifyData(req, res, next) {
-        const { title, type } = req.body
+        const { title, type, githubLink } = req.body
         const file = req.file.filename
 
         if (!title)
@@ -11,8 +11,8 @@ class PortfolioValidation {
             return res.status(400).json({ error: 'O tipo é obrigatório!' })
         else if (!file)
             return res.status(400).json({ error: 'A imagem é obrigatória!' })
-        else
-            next()
+
+        next()
     }
 
     async verifyId(req, res, next) {
@@ -24,6 +24,7 @@ class PortfolioValidation {
 
         if (!exists)
             return res.status(400).json({ error: 'Esse projeto não existe!' })
+
         next()
     }
 }
