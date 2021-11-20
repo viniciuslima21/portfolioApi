@@ -1,6 +1,4 @@
 const jwt = require('jsonwebtoken')
-const secretToken = require('../config/auth.json')
-
 
 class Verification {
     verify (req, res, next) {
@@ -12,7 +10,7 @@ class Verification {
         try {      
             const [, token] = authorization.split(' ')
             
-            const data = jwt.verify(token, secretToken.secret)
+            const data = jwt.verify(token, process.env.JWT_SECRET_TOKEN)
 
             const { id, email } = data
             req.idAdmin = id

@@ -1,7 +1,6 @@
 const AdminModel = require('../model/AdminModel')
 const bcryptjs = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const secretToken = require('../config/auth.json')
 
 class AdminController {
 
@@ -19,8 +18,8 @@ class AdminController {
 
             const token = jwt.sign(
                 { idAdmin, emailAdmin }, 
-                secretToken.secret, 
-                { expiresIn: secretToken.expiresIn }
+                `${process.env.JWT_SECRET_TOKEN}`, 
+                { expiresIn: `${process.env.JWT_EXPIRES}` }
             )
 
             return res.status(200).json({ token })
