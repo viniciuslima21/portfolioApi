@@ -6,6 +6,7 @@ const PortfolioSchema = new Schema({
     type: { type: Number, required: true },
     img: { type: String, required: true },
     githubLink: { type: String, required: false },
+    deployLink: { type: String, required: false },
     created: { type: Date, default: Date.now() }
 })
 

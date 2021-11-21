@@ -2,7 +2,7 @@ const PortfolioModel = require('../model/PortfolioModel')
 
 class PortfolioValidation {
     async verifyData(req, res, next) {
-        const { title, type, githubLink } = req.body
+        const { title, type } = req.body
         const file = req.file.filename
 
         if (!title)
