@@ -1,10 +1,10 @@
-# PortfólioAPI
+# Portfólio API
 Repositório da API do meu portfólio oficial.
 
 Para visualizar em seu computador use: 
 
 ```
-git clone https://github.com/viniciuslima21/portfolioApi.git
+git clone https://github.com/viniciuslimaan/portfolioApi.git
 ```
 
 ## Tecnologias utilizadas
