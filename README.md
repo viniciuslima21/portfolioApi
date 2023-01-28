@@ -1,10 +1,10 @@
 # Portfólio API
-Repositório da API do meu portfólio oficial.
+Repositório da API do meu antigo portfólio.
 
 Para visualizar em seu computador use: 
 
 ```
-git clone https://github.com/viniciuslimaan/portfolioApi.git
+git clone https://github.com/viniciuslimaan/oldPortfolioApi.git
 ```
 
 ## Tecnologias utilizadas
