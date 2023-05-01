@@ -14,5 +14,8 @@ app.use('/', routes)
 app.use('/images', express.static('src/uploads'))
 
 app.listen(process.env.PORT || 3333, () => {
-    console.log('API Online!')
+    console.log("----------");
+    console.log("API Online!");
+    console.log("Server running at port " + process.env.PORT || 3333);
+    console.log("----------");
 })
