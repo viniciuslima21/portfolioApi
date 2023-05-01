@@ -6,7 +6,7 @@ class AdminValidation {
         const { email, password } = req.body
 
         if (!email)
-            return res.status(400),json({ error: 'O e-mail é obrigatório!' })
+            return res.status(400).json({ error: 'O e-mail é obrigatório!' })
         else if (!validator.isEmail(email))
             return res.status(400).json({ error: 'O e-mail é inválido!' })
         else if (!password)
